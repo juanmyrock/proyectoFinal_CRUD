@@ -68,7 +68,8 @@ body {
 
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
-    color: #ffd200;
+    color: #ffffff;
+    text-decoration: none;
 }
 
 form {
@@ -92,6 +93,7 @@ table {
 label {
     display: block;
     margin-bottom: 5px;
+    text-decoration: none;
 }
 
 input[type="text"],
@@ -102,6 +104,7 @@ textarea {
     margin-bottom: 10px;
     border: 1px solid #cccccc;
     border-radius: 5px;
+    text-decoration: none;
 }
 
 input[type="submit"] {
@@ -111,10 +114,12 @@ input[type="submit"] {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 input[type="submit"]:hover {
     background-color: #0056b3;
+    text-decoration: none;
 }
 
 button {
@@ -125,6 +130,7 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
 }
 
 button:hover {
@@ -134,7 +140,7 @@ button:hover {
 a {
     padding: 8px;
     margin:4px;
-    background-color: #fdab13;
+    background-color: #ffffff;
     color: #1d1a39;
     border: none;
     border-radius: 5px;
@@ -146,5 +152,6 @@ a {
 
 a:hover {
     background-color: #1d1a39;
-    color:#fdab13
+    text-decoration: none;
+    color:#ffffff
 }

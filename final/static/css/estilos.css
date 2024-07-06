@@ -45,13 +45,14 @@ body {
     font-family: Mon;
     background-color: #1d1a39;
     color:white;
+    background: linear-gradient(to bottom, #19323e, #587686);
 }
 
 .contenedor-centrado {
     display:flex;
     width: 100%;
     justify-content: center;
-    background-color: #1d1a39;
+
 }
 
 .logo-centrado{
@@ -60,7 +61,7 @@ body {
     align-items: center;
     margin-bottom: 5px;
     margin-top: 120px;
-    background-color: #1d1a39;
+
 }
 
 

@@ -14,7 +14,7 @@
     <div class="logo-centrado">
         <img src="./static/img/logo_Codo.jpg" alt="logo">
     </div>
-    <h1>Agregar Productos al Inventario</h1><br>
+    <h1>Agregar Tickets al Inventario</h1><br>
 
     <!--enctype="multipart/form-data" es necesario para enviar archivos al back.-->
     <form id="formulario" enctype="multipart/form-data">
@@ -28,14 +28,14 @@
         <label for="precio">Precio:</label>
         <input type="number" step="0.01" id="precio" name="precio" required><br>
 
-        <label for="imagenProducto">Imagen del producto:</label>
+        <label for="imagenProducto">Imagen del Comprobante:</label>
         <input type="file" id="imagenProducto" name="imagen">
 
         <br><br>
-        <label for="proveedorProducto">Proveedor:</label>
+        <label for="proveedorProducto">Artista:</label>
         <input type="text" id="proveedorProducto" name="proveedor">
         
-        <button type="submit">Agregar Producto</button>
+        <button type="submit">Agregar Ticket</button>
         <a href="panelTickets.html">Menu principal</a>
     </form>
 
@@ -66,18 +66,18 @@
                     } else {
                         // Si hubo un error, lanzar explícitamente una excepción
                         // para ser "catcheada" más adelante
-                        throw new Error('Error al agregar el producto.');
+                        throw new Error('Error al agregar el Ticket.');
                     }
             })
 
                 //Respuesta OK, muestra una alerta informando que el producto se agregó correctamente y limpia los campos del formulario para que puedan ser utilizados para un nuevo producto.
                 .then(function (data) {
-                    alert('Producto agregado correctamente.');
+                    alert('Ticket agregado correctamente.');
                 })
 
                 // En caso de error, mostramos una alerta con un mensaje de error.
                 .catch(function (error) {
-                    alert('Error al agregar el producto.');
+                    alert('Error al agregar el Ticket.');
                 })
 
                 // Limpiar el formulario en ambos casos (éxito o error)

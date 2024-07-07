@@ -180,15 +180,16 @@ def agregar_producto():
     nombre_base, extension = os.path.splitext(nombre_imagen) #Separa el nombre del archivo de su extensión.
     nombre_imagen = f"{nombre_base}_{int(time.time())}{extension}" #Genera un nuevo nombre para la imagen usando un timestamp, para evitar sobreescrituras y conflictos de nombres.
 
-    nuevo_codigo = catalogo.agregar_producto(descripcion, cantidad, precio, nombre_imagen, proveedor)
-    print(f"nuevo_codigo: {nuevo_codigo}")  # <-- Línea de depuración
-    if nuevo_codigo:
-        imagen.save(os.path.join(RUTA_DESTINO, nombre_imagen))
-        print("Producto agregado correctamente")  # <-- Línea de depuración
-        return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
-    else:
-        print("Error al agregar el producto")  # <-- Línea de depuración
-        return jsonify({"mensaje": "Error al agregar el producto."}), 500
+    try:
+        nuevo_codigo = catalogo.agregar_producto(descripcion, cantidad, precio, nombre_imagen, proveedor)
+        if nuevo_codigo:
+            imagen.save(os.path.join(RUTA_DESTINO, nombre_imagen))
+            return jsonify({"mensaje": "Producto agregado correctamente.", "codigo": nuevo_codigo, "imagen": nombre_imagen}), 201
+        else:
+            return jsonify({"mensaje": "Error al agregar el producto."}), 500
+    except Exception as e:
+        return jsonify({"mensaje": "Ocurrió un error.", "error": str(e)}), 500
+
 
 
 #--------------------------------------------------------------------

@@ -118,20 +118,20 @@ class Catalogo:
 # Cuerpo del programa
 #--------------------------------------------------------------------
 # Crear una instancia de la clase Catalogo
-catalogo = Catalogo(
+"""catalogo = Catalogo(
     host='127.0.0.1',  # Dirección del host de la base de datos
     user='root',       # Nombre de usuario de la base de datos
     password='',  # Contraseña del usuario de la base de datos
     database='miapp'   # Nombre de la base de datos
-)
-#catalogo = Catalogo(host='USUARIO.mysql.pythonanywhere-services.com', user='USUARIO', password='CLAVE', database='USUARIO$miapp')
+)"""
+catalogo = Catalogo(host='juanmyrock.mysql.pythonanywhere-services.com', user='juanmyrock', password='admin789', database='juanmyrock$miapp')
 
 
 # Carpeta para guardar las imagenes.
-RUTA_DESTINO = './static/imagenes/'
+#RUTA_DESTINO = './static/img/'
 
 #Al subir al servidor, deberá utilizarse la siguiente ruta. USUARIO debe ser reemplazado por el nombre de usuario de Pythonanywhere
-#RUTA_DESTINO = '/home/USUARIO/mysite/static/imagenes'
+RUTA_DESTINO = '/home/juanmyrock/mysite/static/img'
 
 
 #--------------------------------------------------------------------
